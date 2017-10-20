@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.bridgelabz.oneToone.Person" table="Person">
+<id name="id" type="int" column="id">
+<generator class="native"></generator>
+</id>
+<property name="name" type="string" column="name"></property>
+<many-to-one name="passport" class="com.bridgelabz.oneToone.Passport" column="Passport_id" unique="true"></many-to-one>
+</class>
+<class name="com.bridgelabz.oneToone.Passport" table="Passport">
+<id name="id" type="int" column="Passport_id">
+<generator class="native"></generator>
+</id>
+<property name="number" type="string" column="Passport_number"></property>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" > 
+<hibernate-mapping>
+<class name="com.bridgelabz.XMLconfiguration.Accounts" table="account">
+<meta attribute="class-description">This class contains user account details</meta>
+<id name="id" type="int" column="id">
+<generator class="native"></generator>
+</id>
+<property name="UserName" column="username" type="string"></property>
+<property name="password" column="password" type="string"></property>
+</class>
+</hibernate-mapping>
